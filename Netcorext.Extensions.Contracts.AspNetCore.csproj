@@ -23,7 +23,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Netcorext.Contracts.Abstractions" Version="1.0.1-dev-3c75979" />
+    <PackageReference Include="Netcorext.Contracts.Abstractions" Version="1.0.1-dev.*" />
   </ItemGroup>
 
   <Target Name="IncludeProjectReferences" DependsOnTargets="ResolveReferences">
