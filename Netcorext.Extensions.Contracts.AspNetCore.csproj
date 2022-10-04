@@ -21,11 +21,7 @@
     <RepositoryUrl>https://github.com/NETCOREXT/Netcorext.Extensions.Contracts.AspNetCore.git</RepositoryUrl>
     <Description>Normalized result object to ActionResult</Description>
   </PropertyGroup>
-
-  <ItemGroup>
-    <PackageReference Include="Netcorext.Contracts.Abstractions" Version="1.0.1-dev.*" />
-  </ItemGroup>
-
+  
   <Target Name="IncludeProjectReferences" DependsOnTargets="ResolveReferences">
     <ItemGroup>
       <IncludeBuildOutput />
