@@ -36,7 +36,7 @@ public static class ObjectExtensions
         switch (httpStatus)
         {
             case < 100:
-            case > 500:
+            case > 511:
                 throw new ArgumentOutOfRangeException(nameof(httpStatus));
             case 204:
                 return new NoContentResult();
@@ -82,7 +82,7 @@ public static class ObjectExtensions
 
     public static IActionResult ToActionResult<T>(this T source, int httpStatus, string contentKey) where T : class
     {
-        if (httpStatus is < 100 or > 500)
+        if (httpStatus is < 100 or > 511)
             throw new ArgumentOutOfRangeException(nameof(httpStatus));
 
         if (string.IsNullOrWhiteSpace(contentKey))
